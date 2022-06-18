@@ -1,0 +1,8 @@
+1. BUS
+2. virtual memory
+3. left shift = logical right shift (but reverse)
+4. aritthmetic right shift (add 1 or 0)
+5. long double, double, float, unsigned long, long long, unsigned long, long, unsigned int, int. (high -> low)
+6. 符号位扩展可以保持数值不变.
+7. 不要在被多个文件引用的头文件中定义全局变量
+8. include guards prevents double declaration & recursive include

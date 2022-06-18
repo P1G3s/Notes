@@ -1,0 +1,4 @@
+1. The files under sysfs:
+		provide information about devices
+2. The files under devtmpfs:
+		interface to access devices.

@@ -1,0 +1,6 @@
+1. One-major-one-driver principle
+2. "__user - This annotation is a form of documenta-tion,   noting   that   a   pointer   is   a   user-space   address   that   cannot   be   directlydereferenced"
+3. Steps to register a device (module?).
+4. scull_open() -> How to get scull_dev? (1. get cdev from inode.  2.get scull_dev from cdev with macro container_of())
+5. "application ter-minates without explicitly closing its open files: the kernel automatically closes anyfile at process exit time by internally using theclose system call"
+6. diff "release" "close"

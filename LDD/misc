@@ -1,0 +1,29 @@
+1. is device's information get exported to the sysfs by bus driver first? or the device's driver gets loaded first? 
+		exported to the sysfs first.
+
+2. any relation between modalias and device table
+
+
+```
+What happens after a device is plugged in (which process is true?).
+Recipe:
+	1. device table: kernel has a device table filled with information (about what kind of devices is supported by the drivers currently possessed by the kernel)
+	2. udev– A Userspace Implementation of devfs
+
+Process1.0:
+	1. Device is plugged in. Kernel detects the device, and export the information of the device to sysfs.
+	2. In the mean time, a uevent has been triggered, udev then find the corresponding modalias in the sysfs.
+	3. With the default rule set in udev, udev will then look for the corresponding driver(module) according to the modalias. and modprobe it into the kernel.
+
+Process2.0:
+	1. Device is plugged in. Kernel detects the device, and export the information of the device to sysfd, and automatically create a device node in devfs.
+	2. In the mean time, a uevent has been triggered, udev then find the corresponding modalias in the sysfs.
+	3. With the default rule set in udev, udev will then look for the corresponding driver(module) according to the modalias. and modprobe it into the kernel.
+	4. Register the driver to the just created device node, then udev also create a symlink points to the device node based on the rules.
+```
+
+
+Process(?):
+	1. At compilation of driver, driver exposes its supported devices' vendor/device id by using - "MODULE_DEVICE_TABLE(of, omap_mcspi_of_match);"
+	2. When the device is plugged in, kernel will try to find if there is a matched vendor/device id on device table. If it is found, kernel will "modprobe" the corresponding driver.
+	

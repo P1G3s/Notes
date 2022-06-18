@@ -1,0 +1,4 @@
+1. CANNOT	*mov    memory    memory*.
+2. 	*movq     32bits-imm    register*
+	*movabsq  64bits-imm	register*
+3. How leaq multiplys?

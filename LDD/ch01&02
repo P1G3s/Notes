@@ -1,0 +1,15 @@
+1. Split -> Mechanism(what it does) & Policy(how to use it).
+
+2. File system != Device driver.
+
+3. ??? "This is the Title of the Book, eMatter EditionCopyright © 2005 O’Reilly & Associates, Inc. All rights reserved.8|Chapter 1:   An Introduction to Device DriversIn addition to device drivers, other functionalities, both hardware and software, aremodularized in the kernel. One common example is filesystems. A filesystem typedetermines how information is organized on a block device in order to represent atree of directories and files. Such an entity is not a device driver, in that there’s noexplicit device associated with the way the information is laid down; the filesystemtype is instead a software driver, because it maps the low-level data structures tohigh-level data structures. It is the filesystem that determines how long a filenamecan be and what information about each file is stored in a directory entry. The file-system module must implement the lowest level of the system calls that access direc-tories and files, by mapping filenames and paths (as well as other information, suchas access modes) to data structures stored in data blocks. Such an interface is com-pletely independent of the actual data transfer to and from the disk (or othermedium), which is accomplished by a block device driver."
+
+4. Concurrency issue.
+
+5. "Insmod resolves undefined symbols against the table of public kernel symbols. When a module isloaded, any symbol exported by the module becomes part of the kernel symbol table."
+
+6. Module Stacking.
+
+7. __init to save memory.
+
+8. Register, Clean up

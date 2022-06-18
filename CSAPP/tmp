@@ -1,0 +1,5 @@
+1. "These two sections hold the module’s variables. Any variable that is not initial-ized at compile time ends up in.bss, while those that are initialized go into.data."
+
+2. why some registers are caller-saved and the others are callee-saved? why not just make caller/callee to save all the registers?
+	"https://stackoverflow.com/questions/9268586/what-are-callee-and-caller-saved-registers/56178078#56178078"
+

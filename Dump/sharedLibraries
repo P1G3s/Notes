@@ -1,0 +1,5 @@
+ # Shared Libraries
+ - "realname": actual library  (e.g. /usr/lib/libreadline.so.3.0)
+ - "soname": a symbolic link to "realname"  (e.g. /usr/lib/libreadline.so.3)
+ - "linkername": the name that the compiler uses when requesting a library, a symbolic link to either "realname" or "soname"  (e.g. /usr/lib/libreadline.so)
+ - **WHY these conventions?**

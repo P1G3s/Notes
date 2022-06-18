@@ -1,0 +1,1 @@
+1. .bss is merely a 占位符 in object file (so it takes less space on disk), when programs is loaded, memory is allocated for .bss

@@ -1,0 +1,2 @@
+1. open: Allocate and fill "scull_dev" data structure to be put in filp->private_data.
+2. s_pos: starting quantum. 		q_pos: starting byte inside quantum (if quantum is half-filled).
